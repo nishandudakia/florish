@@ -1,0 +1,13 @@
+DROP TABLE IF EXISTS user;
+DROP TABLE IF EXISTS events;
+
+CREATE TABLE user(
+user_id INT SERIAL GENERATED ALWAYS AS IDENTITY,
+first_name VARCHAR(255) NOT NULL,
+last_name VARCHAR(255),
+user_name VARCHAR(255),
+email_address VARCHAR(255),
+is_council BOOLEAN DEFAULT FALSE,
+council_id INT DEFAULT NULL,
+PRIMARY KEY(user_id)
+);
