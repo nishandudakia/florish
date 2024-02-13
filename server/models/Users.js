@@ -19,7 +19,7 @@ class User {
     static async getAll() {
       const response = await db.query("SELECT * FROM User;");
       if (response.rows.length === 0) {
-        throw new Error("No users available";)
+        throw new Error("No users available;")
       } else {
         return response.rows.map(u => new User(u));
       }
