@@ -20,29 +20,29 @@
 
 #card3 {
     left: 6%;
-    top: 230px;
+    top: 0px;
 }
 
 #card4 {
     left: 17%;
-    top: 230px;
+    top: 0px;
 }
 
 #card5 {
     left: 6%;
-    top: 360px;
+    top: -100px;
 }
 
 #card6 {
     left: 17%;
-    top: 360px;
+    top: -100px;
 }
 
 .footer {
     position: relative;
     height: 20px;
     width: 100%;
-    bottom: -420px;
+    bottom: 0px;
     background-color: #FFFFFF;
 }
 
@@ -53,6 +53,7 @@
     width: 55%;
     background-color: grey;
     border-radius: 30px 0px 30px 0px;
+    overflow: hidden;
 }
 
 .cardimg {
@@ -120,16 +121,28 @@
 
 .descriptioncontainer {
     position: relative;
+    height: 190px;
     width: 37%;
-    transform: translate(160%, -260px);
+    transform: translate(160%, -270px);
     text-align: center;
     font-family: 'Inter', sans-serif;
+    overflow: scroll;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+.descriptioncontainer::-webkit-scrollbar {
+    display: none;
+}
+
+.description {
+    display:inline;
 }
 
 .attendingbutton {
     color: #FFFFFF;
     border: 0px;
-    transform: translate(355%, -62px);
+    transform: translate(355%, -250px);
     border-radius: 30px 0px 30px 0px;
     width: 22%;
     height: 15%;
