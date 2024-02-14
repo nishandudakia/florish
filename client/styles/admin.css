@@ -1,30 +1,52 @@
+.sidebar {
+    top: 13.4%;
+    margin: 0;
+    padding: 0;
+    width: 25vw;
+    /* background-color: rgb(171, 218, 224); */
+    background-color: #8abdf7;
+    position: fixed;
+    height: 86.6%;
+    overflow: hidden;
+    text-align: center;
+}
+
+.sidebar a {
+    display: block;
+    color: black;
+    padding: 16px;
+    text-decoration: none;
+    font-size: 2vw;
+    transform: translate(-0.5vw, 0px);
+}
+
 .card {
     display: block;
     background-color: #E7E6F7;
     position: relative;
-    left: 30%;
-    width: 38%;
-    height: 350px;
+    left: 40%;
+    width: 42%;
+    height: 420px;
     box-shadow: 2px 2px 2px grey;
     border-radius: 30px;
 }
 
 #admincard1 {
-    top: 100px;
+    top: 200px;
 }
 
 #admincard2 {
-    top: 220px;
+    top: 320px;
 }
 
 #admincard3 {
-    top: 340px;
+    top: 440px;
 }
 
 .cardimgcontainer {
     text-align: center;
     position: relative;
-    height: 190px;
+    height: 230px;
     width: 55%;
     background-color: grey;
     border-radius: 30px 0px 30px 0px;
@@ -42,15 +64,15 @@
 .namecontainer {
     position: relative;
     transform: translate(0px, -10px);
-    height: 110px;
+    height: 140px;
     width: 55%;
     background-color: #276FBF;
     border-radius: 0px 30px 0px 30px;
     text-align: center;
     color: #FFFFFF;
     font-family: 'Inter', sans-serif;
-    font-size: 1.4vw;
-    line-height: 45px;
+    font-size: 1.6vw;
+    line-height: 90px;
 }
 
 .name {
@@ -59,7 +81,7 @@
 
 .locationcontainer {
     position: relative;
-    transform: translate(122%, 20px);
+    transform: translate(122.4%, 5.1px);
     height: 45px;
     width: 45%;
     background-color: #E80000;
@@ -67,7 +89,7 @@
     text-align: center;
     color: #FFFFFF;
     font-family: 'Inter', sans-serif;
-    font-size: 0.7vw;
+    font-size: 0.8vw;
     align-items: flex-end;
     line-height: 45px;
 }
@@ -78,7 +100,7 @@
 
 .datecontainer {
     position: relative;
-    transform: translate(150%, -190px);
+    transform: translate(150%, -230px);
     height: 60px;
     width: 40%;
     background-color: #276FBF;
@@ -96,9 +118,9 @@
 
 .descriptioncontainer {
     position: relative;
-    height: 190px;
+    height: 280px;
     width: 37%;
-    transform: translate(160%, -270px);
+    transform: translate(160%, -310px);
     text-align: center;
     font-family: 'Inter', sans-serif;
     overflow: scroll;
@@ -115,44 +137,42 @@
 }
 
 .acceptbutton {
-    border-left-width: 0px;
-    border-top-width: 0px;
-    border-bottom-width: 0px;
-    transform: translate(720%, -250px);
-    border-radius: 30px 0px 0px 0px;
-    border-right-color: #000000;
-    border-right-width: 3px;
-    width: 11%;
-    height: 15%;
+    border: 0px;
+    transform: translate(970%, -625px);
+    border-radius: 50%;
+    width: 12%;
+    height: 21%;
     background-color: #276FBF;
 }
 
 .acceptbutton:hover {
+    cursor: pointer;
     background-color: #318bf3;
 }
 
 .tick {
+    width: 40%;
+    height: 40%;
     transform: translate(0px, 2px);
 }
 
 .denybutton {
-    border-right-width: 0px;
-    border-top-width: 0px;
-    border-bottom-width: 0px;
-    transform: translate(705%, -250px);
-    border-radius: 0px 0px 30px 0px;
-    border-left-color: #000000;
-    border-left-width: 3px;
-    width: 11%;
-    height: 15%;
+    border: 0px;
+    transform: translate(865%, -475px);
+    border-radius: 50%;
+    width: 12%;
+    height: 21%;
     background-color: #276FBF;
 }
 
 .denybutton:hover {
+    cursor: pointer;
     background-color: #318bf3;
 }
 
 .cross {
+    width: 40%;
+    height: 40%;
     transform: translate(0px, 2px);
 }
 

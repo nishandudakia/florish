@@ -11,37 +11,37 @@
 #card1 {
     margin-left: 0%;
     left: 6%;
-    top: 100px;
+    top: 200px;
     margin-right: -5%;
 }
 
 #card2 {
     left: 17%;
-    top: 100px;
+    top: 200px;
 }
 
 #card3 {
     margin-left: 0%;
     left: 6%;
-    top: 20px;
+    top: 120px;
     margin-right: -5%;
 }
 
 #card4 {
     left: 17%;
-    top: 20px;
+    top: 120px;
 }
 
 #card5 {
     margin-left: 0%;
     left: 6%;
-    top: -60px;
+    top: 40px;
     margin-right: -5%;
 }
 
 #card6 {
     left: 17%;
-    top: -60px;
+    top: 40px;
 }
 
 .footer {
