@@ -68,10 +68,10 @@ async function destroy(req, res) {
     try{
         const name = req.params.event_name 
         const event = await Event.getOneEvent(name) 
-        const result = await event.destroy()
+        const result = await event[0].destroy() 
         res.status(204).end()
     } catch(err) {
-        res.send(404).json({error: err.message})
+        res.status(404).json({error: err.message})
     }
 }
 
