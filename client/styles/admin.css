@@ -84,6 +84,40 @@
     font-family: 'Inter', sans-serif;
 }
 
+.acceptbutton {
+    border-left-width: 0px;
+    border-top-width: 0px;
+    border-bottom-width: 0px;
+    transform: translate(720%, -62px);
+    border-radius: 30px 0px 0px 0px;
+    border-right-color: #000000;
+    border-right-width: 3px;
+    width: 11%;
+    height: 15%;
+    background-color: #276FBF;
+}
+
+.tick {
+    transform: translate(0px, 2px);
+}
+
+.denybutton {
+    border-right-width: 0px;
+    border-top-width: 0px;
+    border-bottom-width: 0px;
+    transform: translate(705%, -62px);
+    border-radius: 0px 0px 30px 0px;
+    border-left-color: #000000;
+    border-left-width: 3px;
+    width: 11%;
+    height: 15%;
+    background-color: #276FBF;
+}
+
+.cross {
+    transform: translate(0px, 2px);
+}
+
 .createbutton {
     position: fixed;
     height: 12vh;
@@ -92,6 +126,10 @@
     border-radius: 50%;
     border: 1px solid #276FBF;
     transform: translate(1400%, 0px);
+}
+
+.createbutton:hover {
+    background-color: lightgray;
 }
 
 .createplus {

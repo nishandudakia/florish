@@ -119,6 +119,10 @@
     transform: translate(190%, 0px);
 }
 
+.createbutton:hover {
+    background-color: lightgray;
+}
+
 .createplus {
     width: 70%;
     height: 70%;
