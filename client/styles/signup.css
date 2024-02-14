@@ -1,11 +1,15 @@
-/* Style inputs */
-body {
+.main {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    height: 80vh;
     width: 100vw;
-    margin: 0; /* Reset default margin on body */
+    margin: 0; 
+}
+
+
+#logo{
+    transform: translate(30%, 0);
 }
 
 form {
@@ -15,6 +19,7 @@ form {
     flex-direction: column;
     justify-content: space-evenly;
     text-align: center;
+    font-family: 'Inter', sans-serif;
 }
 
 input[type=text], select {
@@ -26,18 +31,17 @@ input[type=text], select {
     border-radius: 5px;
     box-sizing: border-box;
     background-color: white;
+    font-family: 'Inter', sans-serif;
 }
 
-/* Add new styles for the name container */
 .name-container {
     display: flex;
     justify-content: space-between;
     width: 100%;
 }
 
-/* Style inputs within the name container */
 .name-container input {
-    width: 48%; /* Adjust as needed, leaving space for margins */
+    width: 48%; 
 }
 
 .user-container {
@@ -46,12 +50,10 @@ input[type=text], select {
     width: 100%;
 }
 
-/* Style inputs within the name container */
 .user-container input {
-    width: 48%; /* Adjust as needed, leaving space for margins */
+    width: 48%; 
 }
 
-/* Style the submit button */
 input[type=submit] {
     width: 100%;
     background-color: #276FBF;
@@ -61,9 +63,9 @@ input[type=submit] {
     border: none;
     border-radius: 5px;
     cursor: pointer;
+    font-family: 'Inter', sans-serif;
 }
 
-/* Add a background color to the submit button on mouse-over */
 input[type=submit]:hover {
-    background-color: #CB997E;
+    background-color: grey;
 }

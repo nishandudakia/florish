@@ -34,6 +34,16 @@ class Event {
         return (response.rows.map(e => new Event(e)))
     }
 
+    static async getOneEvent(event_name) {
+        const response = await db.query("SELECT * FROM events WHERE LOWER(event_name) = LOWER($1);", [event_name])
+
+        if(response.rows.length != 1) {
+            throw new Error("Unable to find event.")
+        }
+
+        return (response.rows.map(e => new Event(e)))
+    }
+
     static async acceptAnEvent(event_id) {
         response = await db.query("SELECT * FROM events WHERE event_id = $1;", [event_id])
 
@@ -61,7 +71,7 @@ class Event {
         const existingEvent = await db.query("SELECT event_name FROM events WHERE LOWER(event_name) = LOWER($1);", [event_name])
 
         if(existingEvent.rows.length === 0) {
-            const response = db.query("INSERT INTO events WHERE (event_name, organiser_id, date, number_of_attendees, description, location, accepted_status, list_of_attendees, image) values ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING *;", [event_name, organiser_id, date, number_of_attendees, description, location, accepted_status, list_of_attendees, image])
+            const response = await db.query("INSERT INTO events (event_name, organiser_id, date, number_of_attendees, description, location, accepted_status, list_of_attendees, image) values ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING *;", [event_name, organiser_id, date, number_of_attendees, description, location, accepted_status, list_of_attendees, image])
             return new Event(response.rows[0])
         } else {
             throw new Error("An Event with that name already exists")
@@ -69,13 +79,9 @@ class Event {
     }
 
     async destroy() {
-        const response = await db.query("DELETE FROM events WHERE event_id = $1;", [event_id])
-
-        if (response.rows.length != 1) {
-            throw new Error("Unable to delete event.")
-          }
-      
-          return response
+        const response = await db.query("DELETE FROM events WHERE LOWER(event_name) = LOWER($1);", [this.event_name])  
     }
 
 }
+
+module.exports = Event

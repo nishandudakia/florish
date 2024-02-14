@@ -5,22 +5,32 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="login.js" defer></script>
+    <script src="./js/login.js" defer></script>
+    <link rel="stylesheet" href="styles/stylesheet.css">
     <link rel="stylesheet" href="./styles/login.css">
     <title>Login</title>
 </head>
 
 <body>
 
-    <form>
-        <input type="text" id="username" name="username" placeholder="Username">
-      
-        <input type="text" id="password" name="password" placeholder="Password">
+    <div id="topBar">
+        <img src="./assets/logo.jpeg" alt="Florish Logo" id="logo">
+    </div>
 
-        <input type="submit" value="Login">
+    <div class="main">
+        <form id="login-form">
+            <h1>Login</h1>
+            <input type="text" id="username" name="username" placeholder="Username" required>
+          
+            <input type="text" id="password" name="password" placeholder="Password" required>
+    
+            <input type="submit" value="Login">
+    
+            <p>Don't have an account? <a href="./signup.html">Sign up here</a></p>
+          </form>
+    </div>
 
-        <p>Don't have an account? Click here to create one</p>
-      </form>
+
 </body>
 
 </html>
