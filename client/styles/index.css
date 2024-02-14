@@ -2,15 +2,17 @@
     display: inline-block;
     background-color: #E7E6F7;
     position: relative;
-    width: 38%;
-    height: 350px;
+    width: 42%;
+    height: 420px;
     box-shadow: 2px 2px 2px grey;
     border-radius: 30px;
 }
 
 #card1 {
+    margin-left: 0%;
     left: 6%;
     top: 100px;
+    margin-right: -5%;
 }
 
 #card2 {
@@ -19,37 +21,41 @@
 }
 
 #card3 {
+    margin-left: 0%;
     left: 6%;
-    top: 0px;
+    top: 20px;
+    margin-right: -5%;
 }
 
 #card4 {
     left: 17%;
-    top: 0px;
+    top: 20px;
 }
 
 #card5 {
+    margin-left: 0%;
     left: 6%;
-    top: -100px;
+    top: -60px;
+    margin-right: -5%;
 }
 
 #card6 {
     left: 17%;
-    top: -100px;
+    top: -60px;
 }
 
 .footer {
     position: relative;
     height: 20px;
     width: 100%;
-    bottom: 0px;
+    bottom: -80px;
     background-color: #FFFFFF;
 }
 
 .cardimgcontainer {
     text-align: center;
     position: relative;
-    height: 190px;
+    height: 230px;
     width: 55%;
     background-color: grey;
     border-radius: 30px 0px 30px 0px;
@@ -67,15 +73,15 @@
 .namecontainer {
     position: relative;
     transform: translate(0px, -10px);
-    height: 110px;
+    height: 140px;
     width: 55%;
     background-color: #276FBF;
     border-radius: 0px 30px 0px 30px;
     text-align: center;
     color: #FFFFFF;
     font-family: 'Inter', sans-serif;
-    font-size: 1.4vw;
-    line-height: 45px;
+    font-size: 1.6vw;
+    line-height: 90px;
 }
 
 .name {
@@ -84,7 +90,7 @@
 
 .locationcontainer {
     position: relative;
-    transform: translate(122%, 20px);
+    transform: translate(122.4%, 5.1px);
     height: 45px;
     width: 45%;
     background-color: #E80000;
@@ -92,7 +98,7 @@
     text-align: center;
     color: #FFFFFF;
     font-family: 'Inter', sans-serif;
-    font-size: 0.7vw;
+    font-size: 0.8vw;
     align-items: flex-end;
     line-height: 45px;
 }
@@ -103,7 +109,7 @@
 
 .datecontainer {
     position: relative;
-    transform: translate(150%, -190px);
+    transform: translate(150%, -230px);
     height: 60px;
     width: 40%;
     background-color: #276FBF;
@@ -121,9 +127,9 @@
 
 .descriptioncontainer {
     position: relative;
-    height: 190px;
+    height: 210px;
     width: 37%;
-    transform: translate(160%, -270px);
+    transform: translate(160%, -310px);
     text-align: center;
     font-family: 'Inter', sans-serif;
     overflow: scroll;
@@ -142,7 +148,7 @@
 .attendingbutton {
     color: #FFFFFF;
     border: 0px;
-    transform: translate(355%, -250px);
+    transform: translate(355%, -282.8px);
     border-radius: 30px 0px 30px 0px;
     width: 22%;
     height: 15%;
@@ -171,6 +177,7 @@
 }
 
 .createbutton:hover {
+    cursor: pointer;
     background-color: lightgray;
 }
 
