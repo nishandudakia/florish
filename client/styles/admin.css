@@ -66,7 +66,7 @@
 
 .datecontainer {
     position: relative;
-    transform: translate(150%, -190px);
+    transform: translate(150.5%, -190px);
     height: 60px;
     width: 40%;
     background-color: #276FBF;
@@ -97,6 +97,10 @@
     background-color: #276FBF;
 }
 
+.acceptbutton:hover {
+    background-color: #318bf3;
+}
+
 .tick {
     transform: translate(0px, 2px);
 }
@@ -112,6 +116,10 @@
     width: 11%;
     height: 15%;
     background-color: #276FBF;
+}
+
+.denybutton:hover {
+    background-color: #318bf3;
 }
 
 .cross {
