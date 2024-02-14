@@ -34,6 +34,16 @@ class Event {
         return (response.rows.map(e => new Event(e)))
     }
 
+    static async getOneEvent(event_name) {
+        const response = await db.query("SELECT * FROM events WHERE LOWER(event_name) = LOWER($1);", [event_name])
+
+        if(response.rows.length != 1) {
+            throw new Error("Unable to find event.")
+        }
+
+        return (response.rows.map(e => new Event(e)))
+    }
+
     static async acceptAnEvent(event_id) {
         response = await db.query("SELECT * FROM events WHERE event_id = $1;", [event_id])
 
@@ -79,3 +89,5 @@ class Event {
     }
 
 }
+
+module.exports = Event
