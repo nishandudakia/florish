@@ -16,7 +16,6 @@ form {
     flex-direction: column;
     justify-content: space-evenly;
     text-align: center;
-    //margin: 0;
 }
 
 input[type=text], select {
@@ -27,7 +26,7 @@ input[type=text], select {
     border: 3px solid #276FBF;
     border-radius: 5px;
     box-sizing: border-box;
-    background-color: #white;
+    background-color: white;
 }
 
 /* Add new styles for the name container */

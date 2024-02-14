@@ -88,11 +88,6 @@
     align-items: flex-end;
 }
 
-.location {
-    margin-top: 50px;
-    display: inline;
-}
-
 .datecontainer {
     position: relative;
     transform: translate(150%, -190px);
@@ -102,5 +97,13 @@
     border-radius: 0px 30px 0px 30px;
     text-align: center;
     color: #FFFFFF;
+    font-family: 'Inter', sans-serif;
+}
+
+.descriptioncontainer {
+    position: relative;
+    width: 37%;
+    transform: translate(160%, -260px);
+    text-align: center;
     font-family: 'Inter', sans-serif;
 }
