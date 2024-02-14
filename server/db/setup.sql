@@ -24,19 +24,20 @@ VALUES
 
 CREATE TABLE users (
 user_id INT GENERATED ALWAYS AS IDENTITY,
-first_name VARCHAR(255) NOT NULL,
-last_name VARCHAR(255) NOT NULL,
-user_name VARCHAR(255) NOT NULL,
-email_address VARCHAR(255) NOT NULL,
+fname VARCHAR(255) NOT NULL,
+lname VARCHAR(255) NOT NULL,
+username VARCHAR(255) NOT NULL,
+email VARCHAR(255) NOT NULL,
+password VARCHAR(255) NOT NULL,
 is_council BOOLEAN DEFAULT FALSE,
 council_id INT DEFAULT NULL,
 PRIMARY KEY(user_id)
 );
-INSERT INTO users (first_name, last_name, user_name, email_address, is_council, council_id) VALUES
-('Charlotte', 'Easton', 'lottie_isobel', 'c.easton@florincouncil.gov.uk', TRUE, 605622),
-('Jessica', 'Betiku', 'jessica', 'j.betiku@florincouncil.gov.uk', TRUE, 620493),
-('Nishan', 'Dudakia', 'nishandudakia', 'nishan@gmail.com', FALSE, NULL),
-('Cem', 'Altinay', 'genuisJ01', 'cem@gmail.com', FALSE, NULL);
+INSERT INTO users (fname, lname, username, email, password, is_council, council_id) VALUES
+('Charlotte', 'Easton', 'lottie_isobel', 'c.easton@florincouncil.gov.uk',12345, TRUE, 605622),
+('Jessica', 'Betiku', 'jessica', 'j.betiku@florincouncil.gov.uk',12345, TRUE, 620493),
+('Nishan', 'Dudakia', 'nishandudakia', 'nishan@gmail.com',12345, FALSE, NULL),
+('Cem', 'Altinay', 'genuisJ01', 'cem@gmail.com',12345, FALSE, NULL);
 
 
 
