@@ -7,7 +7,7 @@ eventRouter.get('/all', eventController.index)
 eventRouter.get('/:event_name', eventController.show) 
 eventRouter.post('/:event_id/accept', eventController.accept)
 eventRouter.post('/:event_id/decline', eventController.decline)
-eventRouter.post('/', eventController.create)
+eventRouter.post('/create', eventController.create)
 eventRouter.delete('/:event_name', eventController.destroy)
  
 module.exports = eventRouter
