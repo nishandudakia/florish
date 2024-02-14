@@ -1,55 +1,46 @@
+.sidebar {
+    top: 13.4%;
+    margin: 0;
+    padding: 0;
+    width: 25vw;
+    /* background-color: rgb(171, 218, 224); */
+    background-color: #8abdf7;
+    position: fixed;
+    height: 86.6%;
+    overflow: hidden;
+    text-align: center;
+}
+
+.sidebar a {
+    display: block;
+    color: black;
+    padding: 16px;
+    text-decoration: none;
+    font-size: 2vw;
+    transform: translate(-0.5vw, 0px);
+}
+
 .card {
-    display: inline-block;
+    display: block;
     background-color: #E7E6F7;
     position: relative;
+    left: 40%;
     width: 42%;
     height: 420px;
     box-shadow: 2px 2px 2px grey;
     border-radius: 30px;
 }
 
-#card1 {
-    margin-left: 0%;
-    left: 6%;
-    top: 200px;
-    margin-right: -5%;
-}
-
-#card2 {
-    left: 17%;
+#admincard1 {
     top: 200px;
 }
 
-#card3 {
-    margin-left: 0%;
-    left: 6%;
-    top: 120px;
-    margin-right: -5%;
+#admincard2 {
+    top: 320px;
 }
 
-#card4 {
-    left: 17%;
-    top: 120px;
-}
-
-#card5 {
-    margin-left: 0%;
-    left: 6%;
-    top: 40px;
-    margin-right: -5%;
-}
-
-#card6 {
-    left: 17%;
-    top: 40px;
-}
-
-.footer {
-    position: relative;
-    height: 20px;
-    width: 100%;
-    bottom: -80px;
-    background-color: #FFFFFF;
+#admincard3 {
+    top: 440px;
 }
 
 .cardimgcontainer {
@@ -127,7 +118,7 @@
 
 .descriptioncontainer {
     position: relative;
-    height: 210px;
+    height: 280px;
     width: 37%;
     transform: translate(160%, -310px);
     text-align: center;
@@ -145,25 +136,44 @@
     display:inline;
 }
 
-.attendingbutton {
-    color: #FFFFFF;
+.acceptbutton {
     border: 0px;
-    transform: translate(355%, -282.8px);
-    border-radius: 30px 0px 30px 0px;
-    width: 22%;
-    height: 15%;
+    transform: translate(970%, -625px);
+    border-radius: 50%;
+    width: 12%;
+    height: 21%;
     background-color: #276FBF;
-    font-family: 'Inter', sans-serif;
-    font-size: 1vw;
 }
 
-.attendingbutton:hover {
+.acceptbutton:hover {
+    cursor: pointer;
     background-color: #318bf3;
 }
 
-.attendingtext {
-    display: inline;
-    transform: translate(0px, -4px);
+.tick {
+    width: 40%;
+    height: 40%;
+    transform: translate(0px, 2px);
+}
+
+.denybutton {
+    border: 0px;
+    transform: translate(865%, -475px);
+    border-radius: 50%;
+    width: 12%;
+    height: 21%;
+    background-color: #276FBF;
+}
+
+.denybutton:hover {
+    cursor: pointer;
+    background-color: #318bf3;
+}
+
+.cross {
+    width: 40%;
+    height: 40%;
+    transform: translate(0px, 2px);
 }
 
 .createbutton {
@@ -173,7 +183,7 @@
     bottom: 20px;
     border-radius: 50%;
     border: 1px solid #276FBF;
-    transform: translate(190%, 0px);
+    transform: translate(1400%, 0px);
 }
 
 .createbutton:hover {
@@ -185,4 +195,12 @@
     width: 70%;
     height: 70%;
     transform: translate(0%, 2%);
+}
+
+.footer {
+    position: relative;
+    height: 20px;
+    width: 100%;
+    bottom: -420px;
+    background-color: #FFFFFF;
 }

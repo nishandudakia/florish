@@ -31,7 +31,6 @@ input[type=text], select {
     box-sizing: border-box;
     background-color: white;
     font-family: 'Inter', sans-serif;
-
 }
 
 input[type=submit] {
