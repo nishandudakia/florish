@@ -21,10 +21,35 @@ async function show(req, res) {
     }
 }
 
+async function showAccepted(req, res) {
+    try{
+
+        let name = req.params.event_name 
+        const event = await Event.getAcceptedEvents(name)
+        res.status(200).json(event)
+
+    } catch(err) {
+        res.status(404).json({error: err.message})
+    }
+}
+
 async function accept(req, res) {
     try{
         let id = req.params.event_id
         const event = await Event.acceptAnEvent(id)
+        res.status(200).json(event)
+    } catch(err) {
+        res.status(400).json({error: err.message})
+    }
+}
+
+async function decline(req, res) {
+    try{
+        let id = req.params.event_id
+        const event = await Event.declineAnEvent(id)
+        res.status(200).json(event)
+    } catch(err) {
+        res.status(400).json({error: err.message})
     }
 }
 
@@ -50,4 +75,4 @@ async function destroy(req, res) {
     }
 }
 
-module.exports = {index, show, create, destroy}
+module.exports = {index, show, showAccepted, accept, decline, create, destroy}
