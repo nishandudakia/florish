@@ -5,43 +5,52 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="create.js" defer></script>
+    <script src="./js/create.js" defer></script>
+    <link rel="stylesheet" href="styles/stylesheet.css">
     <link rel="stylesheet" href="./styles/create.css">
     <title>Create Event</title>
 </head>
 
 <body>
 
+    <div id="topBar">
+        <img src="./assets/logo.jpeg" alt="Florish Logo" id="logo">
+        <button onclick="location.href='./admin.html'" id="adminButton">Admin Board</button>
+        <button onclick="location.href='./login.html'" id="loginButton">Login</button>
+        <span id="initials">?</span>
+    </div>
 
-    <form>
-        <h1>Submit your event:</h1>
+    <div class="main">
+        <form id="create-form">
+            <h1>Submit your event</h1>
+    
+    
+            <div class="title-location-container">
+    
+            <input type="text" id="title" name="title" placeholder="Title" maxlength="30" required>
+    
+            <input type="text" id="location" name="location" placeholder="Location" maxlength="29" required>
+            
+            </div>
+    
+            <div class="description">
+    
+            <textarea type="text" id="description" name="description" placeholder="Description" required></textarea>
+    
+            </div>
 
 
-        <div class="title-location-container">
-
-        <input type="text" id="title" name="title" placeholder="Title">
-
-        <input type="text" id="location" name="location" placeholder="Location">
+            <div class="title-location-container">
+            <input type="datetime-local" id="date" name="date" placeholder="Date" required>
+            <label for="files">Browse Files</label>
+            <input id="files" style="display:none;" type="file">
+            </div>
         
-        </div>
+            <input type="submit" value="Submit">
+          </form>
+    </div>
 
-        <div class="description">
-
-        <input type="text" id="description" name="description" placeholder="Description">
-
-        </div>
-      
-
-        <div class="date-time-container">
-
-        <input type="text" id="date" name="date" placeholder="Date">
-
-        <input type="text" id="date" name="date" placeholder="Time">
-
-        </div>
-
-        <input type="submit" value="Submit">
-      </form>
+    
 </body>
 
 </html>

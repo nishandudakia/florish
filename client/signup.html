@@ -5,28 +5,37 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="signup.js" defer></script>
+    <script src="./js/signup.js" defer></script>
+    <link rel="stylesheet" href="styles/stylesheet.css">
     <link rel="stylesheet" href="./styles/signup.css">
     <title>Sign Up</title>
 </head>
 
 <body>
 
-    <form>
-        <div class="name-container">
-            <input type="text" id="fname" name="fname" placeholder="First name">
-            <input type="text" id="lname" name="lname" placeholder="Last name">
-        </div>
-        <input type="text" id="email" name="email" placeholder="Email address">
-        <div class = "user-container">
-        <input type="text" id="username" name="username" placeholder="Username">
-        <input type="text" id="password" name="lastname" placeholder="Password">
-        </div>
-        <input type="text" id="ecode" name="ecode" placeholder="Enter employee code (if applicable)">
-        <input type="submit" value="Sign Up">
+    <div id="topBar">
+        <img src="./assets/logo.jpeg" alt="Florish Logo" id="logo">
+    </div>
 
-        <p>Already have an account? Click here to login</p>
-      </form>
+    <div class="main">
+        <form id="signup-form">
+            <h1>Sign up</h1>
+            <div class="name-container">
+                <input type="text" id="fname" name="fname" placeholder="First name" required>
+                <input type="text" id="lname" name="lname" placeholder="Last name" required>
+            </div>
+            <input type="text" id="email" name="email" placeholder="Email address" required>
+            <div class = "user-container">
+            <input type="text" id="username" name="username" placeholder="Username" required>
+            <input type="text" id="password" name="password" placeholder="Password" required>
+            </div>
+            <input type="submit" value="Sign Up">
+    
+            <p>Already have an account? <a href="./login.html">Click here to login</a></p>
+          </form>
+    </div>
+
+
 
 </body>
 

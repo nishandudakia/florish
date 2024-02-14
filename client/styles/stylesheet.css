@@ -21,35 +21,46 @@ body {
     height: 9vh;
 }
 
+#logo:hover {
+    cursor: pointer;
+}
+
 #adminButton {
-    transform: translate(30%, -2.5vh);
-    background-color: #E7E6F7;
+    transform: translate(950%, -2.5vh);
+    color: #FFFFFF;
+    border: 0px;
+    background-color: #276FBF;
     text-align: center;
     padding: 0.8%;
-    padding-left: 2vw;
-    padding-right: 2vw;
     font-size: 1vw;
     font-family: 'Inter', sans-serif;
-    border: 1px solid #000000;
     border-radius: 5px;
 }
 
+#adminButton:hover {
+    cursor: pointer;
+}
+
 #loginButton {
-    transform: translate(625%, -2.5vh);
-    background-color: #E7E6F7;
+    transform: translate(1730%, -2.5vh);
+    width: 1vw;
+    border: 0px;
+    background-color: #276FBF;
     text-align: center;
     padding: 0.8%;
-    padding-left: 4vw;
-    padding-right: 4vw;
+    padding-right: 3.5vw;
     font-size: 1vw;
     font-family: 'Inter', sans-serif;
-    border: 1px solid #000000;
-    border-radius: 5px;
+    color: #FFFFFF;
+}
+
+#loginButton:hover {
+    cursor: pointer;
 }
 
 #initials {
     display: inline-block;
-    transform: translate(68vw, -1.8vh);
+    transform: translate(75vw, -1.8vh);
     padding-top: 0.8%;
     padding-bottom: 2vh;
     padding-left: 1.2vw;
