@@ -20,22 +20,22 @@
 
 #card3 {
     left: 6%;
-    top: 250px;
+    top: 230px;
 }
 
 #card4 {
     left: 17%;
-    top: 250px;
+    top: 230px;
 }
 
 #card5 {
     left: 6%;
-    top: 400px;
+    top: 360px;
 }
 
 #card6 {
     left: 17%;
-    top: 400px;
+    top: 360px;
 }
 
 .footer {
@@ -73,11 +73,17 @@
     text-align: center;
     color: #FFFFFF;
     font-family: 'Inter', sans-serif;
+    font-size: 1.4vw;
+    line-height: 45px;
+}
+
+.name {
+    display: inline;
 }
 
 .locationcontainer {
     position: relative;
-    transform: translate(122%, 65px);
+    transform: translate(122%, 20px);
     height: 45px;
     width: 45%;
     background-color: #E80000;
@@ -85,8 +91,13 @@
     text-align: center;
     color: #FFFFFF;
     font-family: 'Inter', sans-serif;
-    font-size: 1vw;
+    font-size: 0.7vw;
     align-items: flex-end;
+    line-height: 45px;
+}
+
+.location {
+    display: inline;
 }
 
 .datecontainer {
@@ -99,6 +110,12 @@
     text-align: center;
     color: #FFFFFF;
     font-family: 'Inter', sans-serif;
+    font-size: 1.2vw;
+    line-height: 60px;
+}
+
+.date {
+    display: inline;
 }
 
 .descriptioncontainer {
@@ -107,6 +124,27 @@
     transform: translate(160%, -260px);
     text-align: center;
     font-family: 'Inter', sans-serif;
+}
+
+.attendingbutton {
+    color: #FFFFFF;
+    border: 0px;
+    transform: translate(355%, -62px);
+    border-radius: 30px 0px 30px 0px;
+    width: 22%;
+    height: 15%;
+    background-color: #276FBF;
+    font-family: 'Inter', sans-serif;
+    font-size: 1vw;
+}
+
+.attendingbutton:hover {
+    background-color: #318bf3;
+}
+
+.attendingtext {
+    display: inline;
+    transform: translate(0px, -4px);
 }
 
 .createbutton {
