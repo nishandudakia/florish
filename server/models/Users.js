@@ -1,15 +1,15 @@
 const db = require("../db/connect");
 
 class User {
-  constructor(
+  constructor({
     user_id,
     first_name,
     last_name,
     user_name,
     email_address,
     is_council,
-    council_id
-  ) {
+    council_id,
+  }) {
     this.user_id = user_id;
     this.first_name = first_name;
     this.last_name = last_name;
@@ -19,7 +19,7 @@ class User {
     this.council_id = council_id;
   }
   static async getAll() {
-    const response = await db.query("SELECT * FROM User;");
+    const response = await db.query("SELECT * FROM users;");
     if (response.rows.length === 0) {
       throw new Error("No users available;");
     } else {
@@ -59,3 +59,5 @@ class User {
     }
   }
 }
+
+module.exports = User;
