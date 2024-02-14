@@ -107,3 +107,19 @@
     text-align: center;
     font-family: 'Inter', sans-serif;
 }
+
+.createbutton {
+    position: fixed;
+    height: 12vh;
+    width: 6.5vw;
+    bottom: 20px;
+    border-radius: 50%;
+    border: 1px solid #276FBF;
+    transform: translate(190%, 0px);
+}
+
+.createplus {
+    width: 70%;
+    height: 70%;
+    transform: translate(0%, 2%);
+}
