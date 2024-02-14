@@ -1,4 +1,5 @@
 DROP TABLE IF EXISTS events;
+DROP TABLE IF EXISTS users;
 
 CREATE TABLE events(
 event_id SERIAL PRIMARY KEY,
@@ -20,7 +21,7 @@ VALUES
    ('boxing', 2, '11-04-2024 9AM', 7, 'Learn to box', 'Florin Gym', True, 'Jason, Ruby, and more', 'url'),
    ('Grannys knitting class', 1, '15-03-2024 12PM', 18, 'Start a new hobby by taking up knitting', 'Florin community hall', True, 'Melisa, Jenna and more', 'url');
 
-DROP TABLE IF EXISTS users;
+
 CREATE TABLE users (
 user_id INT GENERATED ALWAYS AS IDENTITY,
 first_name VARCHAR(255) NOT NULL,
