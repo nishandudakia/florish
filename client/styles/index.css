@@ -8,42 +8,6 @@
     border-radius: 30px;
 }
 
-#card1 {
-    margin-left: 0%;
-    left: 6%;
-    top: 200px;
-    margin-right: -5%;
-}
-
-#card2 {
-    left: 17%;
-    top: 200px;
-}
-
-#card3 {
-    margin-left: 0%;
-    left: 6%;
-    top: 120px;
-    margin-right: -5%;
-}
-
-#card4 {
-    left: 17%;
-    top: 120px;
-}
-
-#card5 {
-    margin-left: 0%;
-    left: 6%;
-    top: 40px;
-    margin-right: -5%;
-}
-
-#card6 {
-    left: 17%;
-    top: 40px;
-}
-
 .footer {
     position: relative;
     height: 20px;
@@ -171,9 +135,11 @@
     height: 12vh;
     width: 6.5vw;
     bottom: 20px;
+    right: 15%;
     border-radius: 50%;
     border: 1px solid #276FBF;
     transform: translate(190%, 0px);
+    z-index: 10;
 }
 
 .createbutton:hover {

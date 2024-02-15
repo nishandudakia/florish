@@ -31,18 +31,6 @@
     border-radius: 30px;
 }
 
-#admincard1 {
-    top: 200px;
-}
-
-#admincard2 {
-    top: 320px;
-}
-
-#admincard3 {
-    top: 440px;
-}
-
 .cardimgcontainer {
     text-align: center;
     position: relative;
