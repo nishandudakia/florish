@@ -3,6 +3,7 @@ const eventController = require('../controllers/events')
 const eventRouter = Router()
 
 eventRouter.get('/', eventController.showAccepted)
+eventRouter.get('/not', eventController.showUnaccepted);
 eventRouter.get('/all', eventController.index) 
 eventRouter.get('/:event_name', eventController.show) 
 eventRouter.post('/:event_id/accept', eventController.accept)

@@ -33,6 +33,18 @@ async function showAccepted(req, res) {
     }
 }
 
+async function showUnaccepted(req, res) {
+    try{
+
+        let name = req.params.event_name 
+        const event = await Event.getUnacceptedEvents(name)
+        res.status(200).json(event)
+
+    } catch(err) {
+        res.status(404).json({error: err.message})
+    }
+}
+
 async function accept(req, res) {
     try{
         let id = req.params.event_id
@@ -75,4 +87,4 @@ async function destroy(req, res) {
     }
 }
 
-module.exports = {index, show, showAccepted, accept, decline, create, destroy}
+module.exports = {index, show, showAccepted, showUnaccepted, accept, decline, create, destroy}

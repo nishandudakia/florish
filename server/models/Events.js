@@ -34,6 +34,16 @@ class Event {
         return (response.rows.map(e => new Event(e)))
     }
 
+    static async getUnacceptedEvents() {
+        const response = await db.query("SELECT * FROM events WHERE accepted_status = FALSE;")
+
+        if(response.rows.length === 0) {
+            throw new Error("No events available.")
+        }
+
+        return (response.rows.map(e => new Event(e)))
+    }
+
     static async getOneEvent(event_name) {
         const response = await db.query("SELECT * FROM events WHERE LOWER(event_name) = LOWER($1);", [event_name])
 
@@ -45,7 +55,7 @@ class Event {
     }
 
     static async acceptAnEvent(event_id) {
-        response = await db.query("SELECT * FROM events WHERE event_id = $1;", [event_id])
+        const response = await db.query("SELECT * FROM events WHERE event_id = $1;", [event_id])
 
         if(response.rows.length === 0) {
             throw new Error("No events available.")

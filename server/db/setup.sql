@@ -1,6 +1,6 @@
 DROP TABLE IF EXISTS events;
-DROP TABLE IF EXISTS users;
 DROP TABLE IF EXISTS token;
+DROP TABLE IF EXISTS users;
 
 CREATE TABLE events(
 event_id SERIAL PRIMARY KEY,
@@ -18,9 +18,9 @@ image VARCHAR(600)
 INSERT INTO events
   (event_name, organiser_id, date, number_of_attendees, description, location, accepted_status, list_of_attendees, image)
 VALUES
-   ('puppy spa', 1, '2024-05-21T8:00', 12, 'A place to pamper your pooches in return for all the love they give', 'Florin grooming salon', True, 'Mason, Scarlet, and more', 'url'),
-   ('boxing', 2, '2024-04-11T9:00', 7, 'Learn to box', 'Florin Gym', True, 'Jason, Ruby, and more', 'url'),
-   ('Grannys knitting class', 1, '2024-03-15T12:00', 18, 'Start a new hobby by taking up knitting', 'Florin community hall', True, 'Melisa, Jenna and more', 'url');
+   ('puppy spa', 1, '2024-05-21T8:00', 12, 'A place to pamper your pooches in return for all the love they give', 'Florin grooming salon', False, 'Mason, Scarlet, and more', 'https://media.glide.mailplus.co.uk/prod/images/gm_preview/6394a920f453-dog-spa-2.jpg'),
+   ('boxing', 2, '2024-04-11T9:00', 7, 'Learn to box', 'Florin Gym', False, 'Jason, Ruby, and more', 'https://anthonyjoshua.com/cdn/shop/articles/AJ_Fight_Insta_1.png?v=1662478898'),
+   ('Grannys knitting class', 1, '2024-03-15T12:00', 18, 'Start a new hobby by taking up knitting', 'Florin community hall', False, 'Melisa, Jenna and more', 'https://i.guim.co.uk/img/media/b7e4ee1a0a4de41e9c91cacbea4074c68164a0de/0_954_3024_1814/master/3024.jpg?width=1200&height=900&quality=85&auto=format&fit=crop&s=a101e0fe71a7ad57dd89f019c5f3ad5b');
 
 
 CREATE TABLE users (
