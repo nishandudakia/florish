@@ -104,7 +104,7 @@ async function loadEvents() {
     spaceFromTop = 200;
     container.innerHTML = '';
 
-    const response = await fetch ("http://localhost:3000/events/not");
+    const response = await fetch ("https://florish-6gcq.onrender.com/events/not");
 
     if (response.status == 200) {
         const events = await response.json();
@@ -124,4 +124,9 @@ function toCreator() {
 
 createEventButton.addEventListener('click', toCreator);
 
-loadEvents();
+async function setup() {
+    await loadEvents();
+    await setupNav();
+}
+
+setup();

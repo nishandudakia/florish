@@ -35,7 +35,7 @@ council_id INT DEFAULT NULL,
 PRIMARY KEY(user_id)
 );
 INSERT INTO users (fname, lname, username, email, password, is_council, council_id) VALUES
-('Charlotte', 'Easton', 'lottie_isobel', 'c.easton@florincouncil.gov.uk',12345, TRUE, 605622),
+('Charlotte', 'Easton', 'lottie_isobel', 'c.easton@florincouncil.gov.uk','$2b$10$T3eDrfQ/EnenKGMjztS8yuXhHi.A8DYChxb1I5wnFndCB67oY0NUy', TRUE, 605622),
 ('Jessica', 'Betiku', 'jessica', 'j.betiku@florincouncil.gov.uk',12345, TRUE, 620493),
 ('Nishan', 'Dudakia', 'nishandudakia', 'nishan@gmail.com',12345, FALSE, NULL),
 ('Cem', 'Altinay', 'genuisJ01', 'cem@gmail.com',12345, FALSE, NULL);

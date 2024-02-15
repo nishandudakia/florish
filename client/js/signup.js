@@ -17,7 +17,7 @@ document.getElementById("signup-form").addEventListener("submit", async (e) => {
         })
     }
 
-    const response = await fetch("http://localhost:3000/users/signup", options);
+    const response = await fetch("https://florish-6gcq.onrender.com/users/signup", options);
     const data = await response.json();
 
     if (response.status == 201) {

@@ -154,6 +154,15 @@
     transform: translate(0px, 2px);
 }
 
+.acceptbuttonused {
+    border: 0px;
+    transform: translate(970%, -625px);
+    border-radius: 50%;
+    width: 12%;
+    height: 21%;
+    background-color: #27bf66;
+}
+
 .denybutton {
     border: 0px;
     transform: translate(865%, -475px);

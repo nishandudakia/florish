@@ -4,6 +4,10 @@ const container = document.getElementById('cardContainer');
 
 const createEventButton = document.getElementById('createbutton');
 
+function cantAttend() {
+    alert("You need to log in first!");
+}
+
 function unattend() {
     this.innerHTML = '<p class="attendingtext">Attend</p>';
     this.removeEventListener('click', unattend);
@@ -31,7 +35,7 @@ function createEventElement(data) {
         left = false;
     } else {
         event.style.left = '17%';
-        spaceFromTop = spaceFromTop - 80;
+        spaceFromTop = spaceFromTop - 120;
         left = true;
     }
 
@@ -83,7 +87,11 @@ function createEventElement(data) {
 
     const attendingButton = document.createElement("button");
     attendingButton.className = "attendingbutton";
-    attendingButton.addEventListener('click', attending);
+    if(localStorage.getItem("token") == null) {
+        attendingButton.addEventListener('click', cantAttend);
+    } else {
+        attendingButton.addEventListener('click', attending);
+    }
     event.appendChild(attendingButton);
 
     const attendingText = document.createElement("p");
@@ -99,7 +107,7 @@ async function loadEvents() {
     left = true;
     container.innerHTML = '';
 
-    const response = await fetch ("http://localhost:3000/events/");
+    const response = await fetch ("https://florish-6gcq.onrender.com/events/");
 
     if (response.status == 200) {
         const events = await response.json();
@@ -113,6 +121,14 @@ async function loadEvents() {
     }
 }
 
-createEventButton.addEventListener('click', toCreator);
+async function setup() {
+    await loadEvents();
+    await setupNav();
+    if(loginButton.className == "loginButton") {
+        createEventButton.className = "createbuttonhidden";
+    } else {
+        createEventButton.addEventListener('click', toCreator);
+    }
+}
 
-loadEvents();
+setup();

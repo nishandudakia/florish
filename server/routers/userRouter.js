@@ -4,7 +4,8 @@ const userRouter = express.Router();
 const userController = require("../controllers/userController");
 
 userRouter.get("/", userController.index);
-userRouter.get("/:token", userController.show)
+userRouter.get("/:id", userController.showUser);
+userRouter.get("/token/:token", userController.show)
 userRouter.post("/login", userController.login);
 userRouter.post("/signup", userController.signUp);
 

@@ -6,6 +6,11 @@
     height: 420px;
     box-shadow: 2px 2px 2px grey;
     border-radius: 30px;
+    transition: 0.7s;
+}
+
+.card:hover {
+    transform: scale(1.2);
 }
 
 .footer {
@@ -151,4 +156,17 @@
     width: 70%;
     height: 70%;
     transform: translate(0%, 2%);
+}
+
+.createbuttonhidden {
+    position: fixed;
+    height: 12vh;
+    width: 6.5vw;
+    bottom: 20px;
+    right: 15%;
+    border-radius: 50%;
+    border: 1px solid #276FBF;
+    transform: translate(190%, 0px);
+    z-index: 10;
+    visibility: hidden;
 }

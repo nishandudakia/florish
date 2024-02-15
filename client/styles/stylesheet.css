@@ -18,17 +18,17 @@ body {
     width: 100vw;
 }
 
-#logo {
+.logo {
     transform: translate(30%, 1.2vh);
     width: 5vw;
     height: 9vh;
 }
 
-#logo:hover {
+.logo:hover {
     cursor: pointer;
 }
 
-#adminButton {
+.adminButton {
     transform: translate(950%, -2.5vh);
     color: #FFFFFF;
     border: 0px;
@@ -38,13 +38,27 @@ body {
     font-size: 1vw;
     font-family: 'Inter', sans-serif;
     border-radius: 5px;
+    visibility: visible;
 }
 
-#adminButton:hover {
+.adminButtonHidden {
+    transform: translate(950%, -2.5vh);
+    color: #FFFFFF;
+    border: 0px;
+    background-color: #276FBF;
+    text-align: center;
+    padding: 0.8%;
+    font-size: 1vw;
+    font-family: 'Inter', sans-serif;
+    border-radius: 5px;
+    visibility: hidden;
+}
+
+.adminButton:hover {
     cursor: pointer;
 }
 
-#loginButton {
+.loginButton {
     transform: translate(1730%, -2.5vh);
     width: 1vw;
     border: 0px;
@@ -57,11 +71,28 @@ body {
     color: #FFFFFF;
 }
 
-#loginButton:hover {
+.loginButton:hover {
     cursor: pointer;
 }
 
-#initials {
+.logoutButton {
+    transform: translate(1710%, -2.5vh);
+    width: 1vw;
+    border: 0px;
+    background-color: #276FBF;
+    text-align: center;
+    padding: 0.8%;
+    padding-right: 3.5vw;
+    font-size: 1vw;
+    font-family: 'Inter', sans-serif;
+    color: #FFFFFF;
+}
+
+.logoutButton:hover {
+    cursor: pointer;
+}
+
+.initials {
     display: inline-block;
     transform: translate(75vw, -1.8vh);
     padding-top: 0.8%;
@@ -74,4 +105,20 @@ body {
     font-size: 2vw;
     font-family: 'Inter', sans-serif;
     border-radius: 50%;
+}
+
+.initialsHidden {
+    display: inline-block;
+    transform: translate(75vw, -1.8vh);
+    padding-top: 0.8%;
+    padding-bottom: 2vh;
+    padding-left: 1.2vw;
+    padding-right: 1.2vw;
+    background-color: #E7E6F7;
+    text-align: center;
+    border: 1px solid #000000;
+    font-size: 2vw;
+    font-family: 'Inter', sans-serif;
+    border-radius: 50%;
+    visibility: hidden;
 }
