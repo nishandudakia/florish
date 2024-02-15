@@ -2,6 +2,7 @@ const bcrypt = require("bcrypt");
 const User = require("../models/users");
 const Token = require("../models/token");
 
+
 async function index(req, res) {
   try {
     const users = await User.getAll();
