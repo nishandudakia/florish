@@ -11,6 +11,18 @@ async function index(req, res) {
   }
 }
 
+async function show (req, res) {
+  try {
+      const token = req.params.token;
+      console.log(token)
+      const user = await Token.getOneByToken(token);
+      console.log(user)
+      res.json(user);
+  } catch (err) {
+      res.status(404).json({"error": err.message})
+  }
+};
+
 async function login(req, res) {
   const data = req.body;
   try {
@@ -39,4 +51,4 @@ async function signUp(req, res) {
   }
 }
 
-module.exports = {index, login, signUp };
+module.exports = {index, login, signUp, show };

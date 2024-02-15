@@ -31,16 +31,33 @@ class Token {
     }
   }
 
+  // static async getOneByToken(token) {
+
+  //   let token2 = "'" + token + "'" 
+  //   console.log(token2)
+  //   console.log("SELECT * FROM token WHERE token = $1", [token2])
+  //   const response = await db.query(`SELECT * FROM token WHERE token = ${token2}`);
+
+  //   console.log(response)
+  //   if (response.rows.length != 1) {
+  //     throw new Error("Unable to locate token.");
+  //   } else {
+  //     return new Token(response.rows[0]);
+  //   }
+  // }
+
+
+
   static async getOneByToken(token) {
-    const response = await db.query("SELECT * FROM token WHERE token = $1", [
-      token,
-    ]);
+    const response = await db.query("SELECT * FROM token WHERE token = $1", [token]);
     if (response.rows.length != 1) {
-      throw new Error("Unable to locate token.");
+        throw new Error("Unable to locate token.");
     } else {
-      return new Token(response.rows[0]);
+        return new Token(response.rows[0]);
     }
-  }
+}
+
+
 }
 
 module.exports = Token;
