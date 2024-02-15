@@ -1,6 +1,6 @@
 const express = require("express");
 const cors = require("cors");
-const logger = require("./middlewares/logger");
+const logger = require("./Middlewares/logger");
 const userRouter = require("./routers/userRouter");
 const app = express();
 app.use(logger);
