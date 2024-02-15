@@ -54,8 +54,9 @@ class User {
   }
 
   static async createUser(data) {
-    const { fname, lname, username, email, password, is_council, council_id } =
+    const { fname, lname, username, email, password} =
       data;
+
 
     const existingUser = await db.query(
       "SELECT username FROM users WHERE LOWER(username)=LOWER($1)",
@@ -63,8 +64,8 @@ class User {
     );
     if (existingUser.rows.length === 0) {
       const response = await db.query(
-        "INSERT INTO users(fname, lname, username, email, password, is_council, council_id) VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING *;",
-        [fname, lname, username, email, password, is_council, council_id]
+        "INSERT INTO users(fname, lname, username, email, password) VALUES ($1, $2, $3, $4, $5) RETURNING *;",
+        [fname, lname, username, email, password]
       );
       const newId = response.rows[0].user_id;
       const newUser = await User.getOneById(newId);

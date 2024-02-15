@@ -16,7 +16,6 @@ async function login(req, res) {
   try {
     const user = await User.getOneByUsername(data.username);
     const authenticated = await bcrypt.compare(data.password, user["password"]);
-
     if (!authenticated) {
       throw new Error("Incorrect credentials.");
     } else {
@@ -31,7 +30,6 @@ async function login(req, res) {
 async function signUp(req, res) {
   try {
     const data = req.body;
-
     const salt = await bcrypt.genSalt(parseInt(process.env.BCRYPT_SALT_ROUNDS));
     data["password"] = await bcrypt.hash(data["password"], salt);
     const result = await User.createUser(data);
