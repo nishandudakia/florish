@@ -3,16 +3,17 @@
     margin: 0;
     padding: 0;
     width: 25vw;
-    /* background-color: rgb(171, 218, 224); */
     background-color: white;
     position: fixed;
     height: 86.6%;
     overflow: hidden;
     text-align: center;
-    border: 3px solid #276FBF; /* Add a border with color #276FBF and 3 pixels width */
+    border-top: 3px solid #276FBF; /* Border at the top with color #276FBF and 3 pixels width */
+    border-right: 3px solid #276FBF; /* Border on the right with color #276FBF and 3 pixels width */
+    border-bottom: 3px solid #276FBF; /* Border at the bottom with color #276FBF and 3 pixels width */
     font-family: 'Inter', sans-serif;
-
 }
+
 
 
 .sidebar hr {
