@@ -1,24 +1,33 @@
 .sidebar {
-    top: 13.4%;
+    top: 13%;
     margin: 0;
     padding: 0;
     width: 25vw;
     /* background-color: rgb(171, 218, 224); */
-    background-color: #8abdf7;
+    background-color: white;
     position: fixed;
     height: 86.6%;
     overflow: hidden;
     text-align: center;
+    border: 3px solid #276FBF; /* Add a border with color #276FBF and 3 pixels width */
+    font-family: 'Inter', sans-serif;
+
 }
 
-.sidebar a {
+
+.sidebar hr {
+    border-color: #276FBF; /* Blue color code */
+}
+
+
+/* .sidebar a {
     display: block;
     color: black;
     padding: 16px;
     text-decoration: none;
     font-size: 2vw;
     transform: translate(-0.5vw, 0px);
-}
+} */
 
 .card {
     display: block;
