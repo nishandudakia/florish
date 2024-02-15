@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="./js/create.js" defer></script>
+    <script src="./js/navbar.js" defer></script>
     <link rel="stylesheet" href="styles/stylesheet.css">
     <link rel="stylesheet" href="./styles/create.css">
     <title>Create Event</title>
@@ -14,10 +15,10 @@
 <body>
 
     <div id="topBar">
-        <img src="./assets/logo.jpeg" alt="Florish Logo" id="logo">
-        <button onclick="location.href='./admin.html'" id="adminButton">Admin Board</button>
-        <button onclick="location.href='./login.html'" id="loginButton">Login</button>
-        <span id="initials">?</span>
+        <img src="./assets/logo.jpeg" alt="Florish Logo" class="logo" id="logo">
+        <button class="adminButton" id="adminButton">Admin Board</button>
+        <button class="loginButton" id="loginButton">Login</button>
+        <span class = "initials" id="initials">?</span>
     </div>
 
     <div class="main">
@@ -41,11 +42,10 @@
 
 
             <div class="title-location-container">
+
             <input type="datetime-local" id="date" name="date" placeholder="Date" required>
-            <label for="files">Browse Files</label>
-            <input id="files" style="display:none;" type="file">
-            </div>
-        
+            <input type="text" id="image" name="image" placeholder="Enter image URL" required>
+             </div>
             <input type="submit" value="Submit">
           </form>
     </div>

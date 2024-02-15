@@ -1,8 +1,5 @@
 document.getElementById("signup-form").addEventListener("submit", async (e) => {
     e.preventDefault();
-
-    console.log('nishan')
-
     const form = new FormData(e.target);
 
     const options = {
@@ -12,15 +9,15 @@ document.getElementById("signup-form").addEventListener("submit", async (e) => {
             'Content-Type': 'application/json'
         },
         body: JSON.stringify({
-            firstname: form.get("fname"),
-            lastname: form.get("lname"),
-            email: form.get("email"),
+            fname: form.get("fname"),
+            lname: form.get("lname"),
             username: form.get("username"),
+            email: form.get("email"),
             password: form.get("password")
         })
     }
 
-    const response = await fetch("http://localhost:3000/users/signup", options);
+    const response = await fetch("https://florish-6gcq.onrender.com/users/signup", options);
     const data = await response.json();
 
     if (response.status == 201) {

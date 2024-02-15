@@ -2,7 +2,6 @@ document.getElementById("login-form").addEventListener("submit", async (e) => {
     e.preventDefault();
 
     const form = new FormData(e.target);
-
     const options = {
         method: "POST",
         headers: {
@@ -15,14 +14,14 @@ document.getElementById("login-form").addEventListener("submit", async (e) => {
         })
     }
 
-    const response = await fetch("http://localhost:3000/users/login", options);
+    const response = await fetch("https://florish-6gcq.onrender.com/users/login", options);
     const data = await response.json();
 
     if (response.status == 200) {
         //localStorage
         // data -> {authenticated: true, token:token}
         localStorage.setItem("token", data.token);
-        window.location.assign('board.html')
+        window.location.assign('index.html')
     } else {
         alert(data.error);
     }

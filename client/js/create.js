@@ -1,9 +1,3 @@
-document.querySelector("#files").onchange = function() {
-    const fileName = this.files[0]?.name;
-    const label = document.querySelector("label[for=files]");
-    label.innerText = fileName ?? "Browse Files";
-  };
-
 document.getElementById("create-form").addEventListener("submit", async (e) => {
     e.preventDefault();
 
@@ -20,15 +14,16 @@ document.getElementById("create-form").addEventListener("submit", async (e) => {
             location: form.get("location"),
             description: form.get("description"),
             date: form.get("date"),
-            image: form.get("files")
+            image: form.get("image")
         })
     }
 
-    const response = await fetch("http://localhost:3000/events/create", options);
+    const response = await fetch("https://florish-6gcq.onrender.com/events/create", options);
     const data = await response.json();
 
-    if (response.status == 200) {
+    if (response.status == 201) {
         alert('Event submitted!')
+        e.target.reset()
     } else {
         alert(data.error);
     }
