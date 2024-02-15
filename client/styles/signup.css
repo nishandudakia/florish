@@ -34,6 +34,18 @@ input[type=text], select {
     font-family: 'Inter', sans-serif;
 }
 
+input[type=password], select {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 3px solid #276FBF;
+    border-radius: 5px;
+    box-sizing: border-box;
+    background-color: white;
+    font-family: 'Inter', sans-serif;
+}
+
 .name-container {
     display: flex;
     justify-content: space-between;
