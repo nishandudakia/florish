@@ -1,13 +1,12 @@
-/* Style inputs */
-body {
+
+.main {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    height: 80vh;
     width: 100vw;
-    margin: 0; /* Reset default margin on body */
+    margin: 0; 
 }
-
 
 form {
     display: flex;
@@ -15,8 +14,8 @@ form {
     height: 60%;
     flex-direction: column;
     justify-content: space-evenly;
+    font-family: 'Inter', sans-serif;
     text-align: center;
-    //margin: 0;
 }
 
 input[type=text], select {
@@ -27,31 +26,89 @@ input[type=text], select {
     border: 3px solid #276FBF;
     border-radius: 5px;
     box-sizing: border-box;
-    background-color: #white;
+    font-family: 'Inter', sans-serif;
+    background-color:white;
 }
 
-/* Add new styles for the name container */
+input[type=datetime-local], select{
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 3px solid #276FBF;
+    border-radius: 5px;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+    background-color:white;
+}
+
+input[type=time], select{
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 3px solid #276FBF;
+    border-radius: 5px;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+    background-color:white;
+}
+
+label {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 3px solid #276FBF;
+    border-radius: 5px;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+    background-color:white;
+  }
+  
+  label:hover {
+    background-color: #eee;
+  }
+
+textarea{
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 3px solid #276FBF;
+    border-radius: 5px;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+    background-color:white;
+}
 .title-location-container {
     display: flex;
     justify-content: space-between;
     width: 100%;
 }
 
-/* Style inputs within the name container */
 .title-location-container input {
-    width: 48%; /* Adjust as needed, leaving space for margins */
+    width: 48%;
 }
 
-/* Add new styles for the name container */
+.image-date-container {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.image-date-container input {
+    width: 48%;
+}
+
 .date-time-container {
     display: flex;
     justify-content: space-between;
     width: 100%;
 }
 
-/* Style inputs within the name container */
 .date-time-container input {
-    width: 48%; /* Adjust as needed, leaving space for margins */
+    width: 48%; 
 }
 
 .description{
@@ -60,7 +117,6 @@ input[type=text], select {
 }
 
 
-/* Style the submit button */
 input[type=submit] {
     width: 100%;
     background-color: #276FBF;
@@ -70,9 +126,9 @@ input[type=submit] {
     border: none;
     border-radius: 5px;
     cursor: pointer;
+    font-family: 'Inter', sans-serif;
 }
 
-/* Add a background color to the submit button on mouse-over */
 input[type=submit]:hover {
     background-color: grey;
 }

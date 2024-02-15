@@ -3,9 +3,36 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/stylesheet.css">
+    <link rel="stylesheet" href="styles/admin.css">
+    <script defer src="./js/admin.js"></script>
+    <script defer src="./js/navbar.js"></script>
     <title>Admin Board</title>
 </head>
 <body>
-    
+    <div id="topBar">
+        <img src="./assets/logo.jpeg" alt="Florish Logo" class="logo" id="logo">
+        <button class="adminButton" id="adminButton">Admin Board</button>
+        <button class="loginButton" id="loginButton">Login</button>
+        <span class = "initials" id="initials">?</span>
+    </div>
+    <div class="sidebar">
+        <h1>Administrator</h1>
+        <hr>
+        <h2>Profile</h2>
+        <h2>Dashboard</h2>
+        <h2>Documents</h2>
+        <h2>Calender</h2>
+        <h2>Venues</h2>
+        <h2>Past Events</h2>
+        <h2>Settings</h2>
+        <h2>Training & Resources</h2>
+        
+    </div>
+    <div id="cardContainer">
+    </div>
+    <button class="createbutton" id="createbutton">
+        <img class="createplus" src="./assets/🦆 icon _plus_.png">
+    </button>
 </body>
 </html>

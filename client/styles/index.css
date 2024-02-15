@@ -2,56 +2,33 @@
     display: inline-block;
     background-color: #E7E6F7;
     position: relative;
-    width: 38%;
-    height: 350px;
+    width: 42%;
+    height: 420px;
     box-shadow: 2px 2px 2px grey;
     border-radius: 30px;
+    transition: 0.7s;
 }
 
-#card1 {
-    left: 6%;
-    top: 100px;
-}
-
-#card2 {
-    left: 17%;
-    top: 100px;
-}
-
-#card3 {
-    left: 6%;
-    top: 250px;
-}
-
-#card4 {
-    left: 17%;
-    top: 250px;
-}
-
-#card5 {
-    left: 6%;
-    top: 400px;
-}
-
-#card6 {
-    left: 17%;
-    top: 400px;
+.card:hover {
+    transform: scale(1.2);
 }
 
 .footer {
     position: relative;
     height: 20px;
     width: 100%;
-    bottom: -420px;
+    bottom: -80px;
     background-color: #FFFFFF;
 }
 
 .cardimgcontainer {
+    text-align: center;
     position: relative;
-    height: 190px;
+    height: 230px;
     width: 55%;
     background-color: grey;
     border-radius: 30px 0px 30px 0px;
+    overflow: hidden;
 }
 
 .cardimg {
@@ -65,18 +42,24 @@
 .namecontainer {
     position: relative;
     transform: translate(0px, -10px);
-    height: 110px;
+    height: 140px;
     width: 55%;
     background-color: #276FBF;
     border-radius: 0px 30px 0px 30px;
     text-align: center;
     color: #FFFFFF;
     font-family: 'Inter', sans-serif;
+    font-size: 1.6vw;
+    line-height: 90px;
+}
+
+.name {
+    display: inline;
 }
 
 .locationcontainer {
     position: relative;
-    transform: translate(122%, 65px);
+    transform: translate(122.4%, 5.1px);
     height: 45px;
     width: 45%;
     background-color: #E80000;
@@ -84,18 +67,18 @@
     text-align: center;
     color: #FFFFFF;
     font-family: 'Inter', sans-serif;
-    font-size: 1vw;
+    font-size: 0.8vw;
     align-items: flex-end;
+    line-height: 45px;
 }
 
 .location {
-    margin-top: 50px;
     display: inline;
 }
 
 .datecontainer {
     position: relative;
-    transform: translate(150%, -190px);
+    transform: translate(150%, -230px);
     height: 60px;
     width: 40%;
     background-color: #276FBF;
@@ -103,4 +86,87 @@
     text-align: center;
     color: #FFFFFF;
     font-family: 'Inter', sans-serif;
+    font-size: 1.2vw;
+    line-height: 60px;
+}
+
+.date {
+    display: inline;
+}
+
+.descriptioncontainer {
+    position: relative;
+    height: 210px;
+    width: 37%;
+    transform: translate(160%, -310px);
+    text-align: center;
+    font-family: 'Inter', sans-serif;
+    overflow: scroll;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+.descriptioncontainer::-webkit-scrollbar {
+    display: none;
+}
+
+.description {
+    display:inline;
+}
+
+.attendingbutton {
+    color: #FFFFFF;
+    border: 0px;
+    transform: translate(355%, -282.8px);
+    border-radius: 30px 0px 30px 0px;
+    width: 22%;
+    height: 15%;
+    background-color: #276FBF;
+    font-family: 'Inter', sans-serif;
+    font-size: 1vw;
+}
+
+.attendingbutton:hover {
+    background-color: #318bf3;
+}
+
+.attendingtext {
+    display: inline;
+    transform: translate(0px, -4px);
+}
+
+.createbutton {
+    position: fixed;
+    height: 12vh;
+    width: 6.5vw;
+    bottom: 20px;
+    right: 15%;
+    border-radius: 50%;
+    border: 1px solid #276FBF;
+    transform: translate(190%, 0px);
+    z-index: 10;
+}
+
+.createbutton:hover {
+    cursor: pointer;
+    background-color: lightgray;
+}
+
+.createplus {
+    width: 70%;
+    height: 70%;
+    transform: translate(0%, 2%);
+}
+
+.createbuttonhidden {
+    position: fixed;
+    height: 12vh;
+    width: 6.5vw;
+    bottom: 20px;
+    right: 15%;
+    border-radius: 50%;
+    border: 1px solid #276FBF;
+    transform: translate(190%, 0px);
+    z-index: 10;
+    visibility: hidden;
 }

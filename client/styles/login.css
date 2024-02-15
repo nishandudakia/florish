@@ -1,13 +1,15 @@
-/* Style inputs */
-body {
+.main {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    height: 80vh;
     width: 100vw;
-    margin: 0; /* Reset default margin on body */
+    margin: 0; 
 }
 
+#logo{
+    transform: translate(30%, 0);
+}
 
 form {
     display: flex;
@@ -16,7 +18,7 @@ form {
     flex-direction: column;
     justify-content: space-evenly;
     text-align: center;
-    //margin: 0;
+    font-family: 'Inter', sans-serif;
 }
 
 input[type=text], select {
@@ -27,10 +29,22 @@ input[type=text], select {
     border: 3px solid #276FBF;
     border-radius: 5px;
     box-sizing: border-box;
-    background-color: #white;
+    background-color: white;
+    font-family: 'Inter', sans-serif;
 }
 
-/* Style the submit button */
+input[type=password], select {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 3px solid #276FBF;
+    border-radius: 5px;
+    box-sizing: border-box;
+    background-color: white;
+    font-family: 'Inter', sans-serif;
+}
+
 input[type=submit] {
     width: 100%;
     background-color: #276FBF;
@@ -40,9 +54,9 @@ input[type=submit] {
     border: none;
     border-radius: 5px;
     cursor: pointer;
+    font-family: 'Inter', sans-serif;
 }
 
-/* Add a background color to the submit button on mouse-over */
 input[type=submit]:hover {
     background-color: grey;
 }
