@@ -77,7 +77,7 @@ class Event {
     }
 
     static async create(data) {
-        const { event_name, organiser_id, date, number_of_attendees, description, location, accepted_status, list_of_attendees, image } = data
+        const { event_name, organiser_id, date, number_of_attendees = 0, description, location, accepted_status = false, list_of_attendees = '', image } = data
         const existingEvent = await db.query("SELECT event_name FROM events WHERE LOWER(event_name) = LOWER($1);", [event_name])
 
         if(existingEvent.rows.length === 0) {
