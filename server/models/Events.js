@@ -8,7 +8,7 @@ class Event {
         this.date = date;
         this.number_of_attendees = number_of_attendees;
         this.description = description;
-        this.location = location;
+        this.location = location; 
         this.accepted_status = accepted_status;
         this.list_of_attendees = list_of_attendees;
         this.image = image;
@@ -26,6 +26,16 @@ class Event {
 
     static async getAcceptedEvents() {
         const response = await db.query("SELECT * FROM events WHERE accepted_status = TRUE;")
+
+        if(response.rows.length === 0) {
+            throw new Error("No events available.")
+        }
+
+        return (response.rows.map(e => new Event(e)))
+    }
+
+    static async getUnacceptedEvents() {
+        const response = await db.query("SELECT * FROM events WHERE accepted_status = FALSE;")
 
         if(response.rows.length === 0) {
             throw new Error("No events available.")
